@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyDebt AI — Discover the Hidden Cost of Skipped Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="badge">7-Step Agentic AI Pipeline</div>
+    <h1>Discover the hidden cost<br/>of <span class="accent">skipped learning.</span></h1>
+    <p class="sub">The reason you're struggling today may be because of something you skipped months ago. Find out exactly what broke — and how to fix it.</p>
+  </section>
+
+  <!-- INPUT PANEL -->
+  <section class="input-panel">
+    <div class="input-group">
+      <label for="subject">Subject / Course</label>
+      <input type="text" id="subject" placeholder="e.g. Data Structures & Algorithms, Calculus, Physics" />
+    </div>
+    <div class="input-group">
+      <label for="skipped">Topics you skipped <span class="muted">(comma separated)</span></label>
+      <textarea id="skipped" rows="3" placeholder="e.g. Recursion, Binary Trees, Pointers"></textarea>
+    </div>
+    <div class="input-group">
+      <label for="apikey">Groq API Key</label>
+      <input type="password" id="apikey" placeholder="Paste your Groq API key here" />
+    </div>
+    <button id="run-btn" onclick="runAgent()">
+      <span id="btn-text">Analyze My Debt →</span>
+    </button>
+  </section>
+
+  <!-- AGENT PIPELINE -->
+  <section class="pipeline" id="pipeline" style="display:none">
+    <h2 class="pipeline-title">Agent Pipeline Running</h2>
+    <div class="steps">
+
+      <div class="step" id="step-1">
+        <div class="step-indicator"><span class="dot"></span></div>
+        <div class="step-body">
+          <div class="step-label">Step 1 — Knowledge Auditor</div>
+          <div class="step-desc">Auditing your skipped topics and calculating initial debt</div>
+          <div class="step-output" id="out-1"></div>
+        </div>
+      </div>
+
+      <div class="step" id="step-2">
+        <div class="step-indicator"><span class="dot"></span></div>
+        <div class="step-body">
+          <div class="step-label">Step 2 — Dependency Mapper</div>
+          <div class="step-desc">Mapping every topic that depends on what you skipped</div>
+          <div class="step-output" id="out-2"></div>
+        </div>
+      </div>
+
+      <div class="step" id="step-3">
+        <div class="step-indicator"><span class="dot"></span></div>
+        <div class="step-body">
+          <div class="step-label">Step 3 — Future Failure Simulator</div>
+          <div class="step-desc">Simulating exactly where you'll fail and why</div>
+          <div class="step-output" id="out-3"></div>
+        </div>
+      </div>
+
+      <div class="step" id="step-4">
+        <div class="step-indicator"><span class="dot"></span></div>
+        <div class="step-body">
+          <div class="step-label">Step 4 — Consequence Predictor</div>
+          <div class="step-desc">Predicting interview risk and real-world impact</div>
+          <div class="step-output" id="out-4"></div>
+        </div>
+      </div>
+
+      <div class="step" id="step-5">
+        <div class="step-indicator"><span class="dot"></span></div>
+        <div class="step-body">
+          <div class="step-label">Step 5 — Recovery Planner</div>
+          <div class="step-desc">Building your personalized recovery roadmap</div>
+          <div class="step-output" id="out-5"></div>
+        </div>
+      </div>
+
+      <div class="step" id="step-6">
+        <div class="step-indicator"><span class="dot"></span></div>
+        <div class="step-body">
+          <div class="step-label">Step 6 — Quiz Generator</div>
+          <div class="step-desc">Generating diagnostic quiz for your weakest gap</div>
+          <div class="step-output" id="out-6"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="results" id="results" style="display:none"></section>
+
+  <script src="app.js"></script>
+</body>
+</html>
